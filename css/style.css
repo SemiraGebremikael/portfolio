@@ -7,15 +7,10 @@
 :root {
 	--color-body: #b6cbce;
 	--color-heading: #eef3db;
-	--color-base: #033f47;
-	--color-base2: #022a30;
-
-
-
-	/*--color-brand: #e0f780;*/
-
-	--color-brand: #bf5220;
-	--color-brand2: #9f441a;
+	--color-base: #363838;
+	--color-base2: #1e2020;
+	--color-brand: #d38919;
+	--color-brand2: #ac6f15;
 	--sidbar-width: 240px;
 	--font-base: "Poppins";
 }
@@ -124,9 +119,10 @@ a:hover {
 	color: var(--color-brand);
 }
 
+/* 
 .img-size img {
 	border: 8px solid var(--color-brand);
-}
+} */
 
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav .nav-link {
@@ -225,7 +221,7 @@ a:hover {
 
 .fab:hover,
 .fas:hover {
-	color: #c76c43;
+	color: var(--color-brand2);
 	;
 }
 
