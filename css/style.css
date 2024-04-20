@@ -124,6 +124,7 @@ a:hover {
 	border: 8px solid var(--color-brand);
 } */
 
+
 @media (min-width: 992px) {
 	.navbar-expand-lg .navbar-nav .nav-link {
 		padding-right: 16px;
