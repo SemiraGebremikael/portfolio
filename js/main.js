@@ -1,13 +1,13 @@
 AOS.init();
 
 AOS.init({
-	offset: 120,
-	delay: 0,
-	duration: 700,
-	easing: "ease",
-	once: false,
-	mirror: false,
-	anchorPlacement: "top-bottom",
+	offset: 120, // Animation starts 120 pixels down from the top.
+	delay: 0, //Animation starts immediately when the element becomes visible.
+	duration: 700, //Animation takes 0.7 seconds to complete.
+	easing: "ease", // Smooth motion in and out.
+	once: false, //Animation plays each time the element comes into view.
+	mirror: false, //Animation doesn't repeat when the user scrolls in the opposite direction.
+	anchorPlacement: "top-bottom", //Animation starts when element top is visible, ends when fully shown.
 });
 
 const navbar = document.querySelector(".navbar");
@@ -22,51 +22,3 @@ window.addEventListener("scroll", () => {
 	}
 });
 
-// const scriptURL =
-// 	"https://script.google.com/macros/s/AKfycbya9zxqfiqL3zccU9Fs3mI2g_mhgzsXqbkLpA52Op0i45CNx64x8tZ8pFENeObdFRFm/exec";
-// const form = document.forms["web-contact-from"];
-
-const btnKirim = document.querySelector(".btn-kirim");
-const btnLoading = document.querySelector(".btn-loading");
-const myAlert = document.querySelector(".my-alert");
-
-form.addEventListener("submit", (e) => {
-	e.preventDefault();
-	btnLoading.classList.toggle("d-none");
-	btnKirim.classList.toggle("d-none");
-
-	fetch(scriptURL, { method: "POST", body: new FormData(form) })
-		.then((response) => {
-			// tampilkan  tombol kirim, hilangkan tombol loading
-			btnLoading.classList.toggle("d-none");
-			btnKirim.classList.toggle("d-none");
-			// tampilkan alert
-			myAlert.classList.toggle("d-none");
-			// reset form
-			form.reset();
-			console.log("Success!", response);
-		})
-		.catch((error) => console.error("Error!", error.message));
-});
-
-// navbar nav menu otomatis
-const sections = document.querySelectorAll("section");
-const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-window.addEventListener("scroll", () => {
-	let current = "";
-	sections.forEach((section) => {
-		const sectionTop = section.offsetTop;
-		const sectionHeight = section.clientHeight;
-		if (pageYOffset >= sectionTop - sectionHeight / 3) {
-			current = section.getAttribute("id");
-		}
-	});
-
-	navbarLinks.forEach((link) => {
-		link.classList.remove("active");
-		if (link.getAttribute("href") === `#${current}`) {
-			link.classList.add("active");
-		}
-	});
-});
