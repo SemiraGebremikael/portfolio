@@ -247,12 +247,22 @@ a:hover {
 		padding-top: 10px;
 	}
 
-	.btn-brand {
-		margin-bottom: 10px;
+	.intro,
+	.title-net,
+	.socials-contact {
+		margin-left: 5px;
+	}
+
+	.info.ms-5.aos-init.aos-animate {
+		margin-right: 26px;
 	}
 
 	.btn {
 		padding: 10px 12px;
+	}
+
+	h4.about.aos-init.aos-animate {
+		margin-left: 10px;
 	}
 
 	.contact-info-container .icon {
