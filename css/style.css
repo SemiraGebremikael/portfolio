@@ -254,4 +254,19 @@ a:hover {
 	.btn {
 		padding: 10px 12px;
 	}
+
+	.contact-info-container .icon {
+		display: none;
+	}
+
+	.contact-info-upper-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-info-container {
+		margin: 0px;
+	}
+
+
 }
