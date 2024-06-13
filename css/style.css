@@ -119,9 +119,11 @@ a:hover {
 	color: var(--color-brand);
 }
 
-.navbar .nav-link.active {
+.nav-item .nav-link.active {
 	color: var(--color-brand);
 }
+
+
 
 /* 
 .img-size img {
