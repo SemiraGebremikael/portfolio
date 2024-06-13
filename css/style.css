@@ -31,6 +31,10 @@ h6 {
 	font-weight: 700;
 }
 
+p {
+	color: var(--color-body)
+}
+
 a {
 	text-decoration: none;
 	color: var(--color-body);
